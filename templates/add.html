@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Movie</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>My favorite movies to watch</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav>
+                <a href="{{ url_for('home') }}"><i class="fa fa-step-backward" aria-hidden="true"></i> Back to list of
+                    movies</a>
+            </nav>
+
+            <div class="row">
+                <div class="column">
+                    <div class="container">
+
+                        <h3><i class="fa-solid fa-file-circle-plus"></i> Add movie</h3>
+
+                        <form method="POST" action="/addMovie">
+                            <fieldset>
+                                <label for="title">Title:</label>
+                                <input name="title" type="text" id="title" placeholder="Title" minlength="1"
+                                    maxlength="150" required>
+                                <br>
+                                <label for="year">Year:</label>
+                                <input name="year" type="number" id="year" placeholder="Year" pattern="\d{4}" min="1888"
+                                    max="2050" required>
+                                <br>
+                                <label for="actors">Actors:</label>
+                                <input name="actors" type="text" id="actors" placeholder="Actors" minlength="1"
+                                    maxlength="150" required>
+                                <br>
+                                <button name="button" type="submit" value="Add">
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                    </i>Add
+                                </button>
+                            </fieldset>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            @ My Movie Database. All rights reserved.
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="/static/style.js"></script>
+
+</body>
+
+</html>

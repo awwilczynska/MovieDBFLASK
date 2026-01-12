@@ -1,0 +1,25 @@
+# Python Specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*.iml
+
+# Local Database
+*.sqlite3
+
+# OS specific
+.DS_Store
+Thumbs.db
