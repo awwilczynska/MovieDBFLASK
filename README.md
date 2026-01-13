@@ -23,7 +23,7 @@ A web-based movie management system built with Flask. This application enables u
 
 ### 1. Clone the repository
 ```bash
-git clone <repository-url>
+git clone git@github.com:awwilczynska/MovieDBFLASK.git
 cd MovieDBFLASK
 ```
 ### 2. Create and activate virtual environment (optional but recommended)
